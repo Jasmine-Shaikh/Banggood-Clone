@@ -1,8 +1,8 @@
 import React from "react";
-import { useState } from "react";
 import styled from "styled-components";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { LoginContext } from "./loginContext"; 
+import { LoginContext } from "./registerContext"; 
 
 const Logo = styled.img`
 width: 172px;
@@ -124,7 +124,7 @@ width: 100%;
 margin-bottom: 15px;
 
 `
-const SignUpTitle = styled.a`
+const SignUpTitle = styled.span`
 border-bottom: 2px solid #ff6e26;
 color: #ff6e26;
 font-weight: 600;
@@ -132,7 +132,7 @@ padding: 15px 30px;
 font-size: 18px;
 margin: 0px;
 `
-const RegisterTitle = styled.a`
+const RegisterTitle = styled.span`
 font-weight: 600;
 font-size: 18px;
 padding: 15px 30px;
@@ -153,18 +153,21 @@ const NavLink = styled(Link)`
 export default function SignUpPage(){
     
     
-    const {login} = React.useContext(LoginContext);
+    const {register} = React.useContext(LoginContext);
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const navigate = useNavigate();
     const handleSignup = () => {
 
+       if(email === "" || password === ""){
+         alert("Please fill all details!")
+         return
+       }
         let payload = {
             email: email,
             password: password,
           };
-
-          login(payload).then((res)=>{
+          register(payload).then((res)=>{
             if(res){
             //   alert("Login Successful!")
                 navigate("/");

@@ -146,13 +146,13 @@ width: 100%;
 margin-bottom: 15px;
 
 `
-const SignUpTitle = styled.a`
+const SignUpTitle = styled.span`
 font-weight: 600;
 padding: 15px 30px;
 font-size: 18px;
 margin: 0px;
 `
-const RegisterTitle = styled.a`
+const RegisterTitle = styled.span`
 border-bottom: 2px solid #ff6e26;
 color: #ff6e26;
 font-weight: 600;
@@ -180,13 +180,38 @@ const NavLink = styled(Link)`
     text-decoration: none;
 
 `
+const PolicyAlert = styled.p`
+  
+    color: #9e2a2a;
+    font-size: 12px;
+    margin-top: -5px;
+    
+`
 
 export default function RegistrationPage(){
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
+    const [terms,setTerms] = useState(true);
+    const [privacy,setPrivacy] = useState(true);
+    //const [passwordError,setPasswordError] = useState(false)
     const navigateTo = useNavigate();
    
     const handleRegisteration = () => {
+
+      if(email === "" || password === "" ){
+        
+        alert("Please fill all the below details!")
+         return;
+      }
+      else if(password.length < 8){
+        alert("Password should consist atleast 8 characters!")
+         return;
+      }
+      else if(privacy === false|| terms === false){
+
+        alert("Please accepts all terms and condiition!")
+        return;
+      }
             const payload = {
               id: uuid(),
               email: email,
@@ -215,6 +240,24 @@ export default function RegistrationPage(){
           }
     }
 
+    const handleTerms = () => {
+      setTerms(current => !current)
+    }
+    const handlePrivacy = () => {
+
+      setPrivacy(current => !current)
+    }
+
+    // const handlePassword = (e) =>{
+       
+    //   if(password >= 8){
+    //     setPasswordError(false)
+    //   }
+    //   else{
+    //   setPasswordError(true)
+    //    } 
+    // }
+
     return (
 
       <>
@@ -240,8 +283,12 @@ export default function RegistrationPage(){
       </RewardDetail>
                 <InputBar type="email" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                 <InputBar type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
-                <DivFlexRow><input type="checkbox"/><GreySmallFont>I agree to Banggood.com.Terms and Conditions. </GreySmallFont></DivFlexRow>
-                <DivFlexRow><input type="checkbox"/><GreySmallFont>I agree to Banggood.com.Privacy Policy. </GreySmallFont></DivFlexRow>
+                {/* {passwordError? <PolicyAlert>***Password should consist atleast 8 characters***</PolicyAlert> : null } */}
+                <DivFlexRow><input type="checkbox" value={terms}  defaultChecked={true} onChange={handleTerms}/><GreySmallFont>I agree to Banggood.com.Terms and Conditions. </GreySmallFont></DivFlexRow>
+                {!terms? <PolicyAlert>Please read and accept our Terms and Conditions.</PolicyAlert> : null }
+               
+                <DivFlexRow><input type="checkbox" value={privacy}  defaultChecked={true} onChange={handlePrivacy}/><GreySmallFont>I agree to Banggood.com.Privacy Policy. </GreySmallFont></DivFlexRow>
+                {!privacy? <PolicyAlert>Please read and accept our Privacy policy.</PolicyAlert> : null }
                 <CreateAccountButton onClick={handleRegisteration}>Create Your Account</CreateAccountButton>
             </FormInput>
       
