@@ -1,0 +1,19 @@
+{
+  "registeredUsers": [
+    {
+      "id": "e700f7c6-b8b3-4627-9ed1-a510783d28d9",
+      "email": "abc@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "c3124a7b-df8e-48b6-a491-f29b37fde5c1",
+      "email": "xyz@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "6ebe7616-23d5-4fec-877f-92d1bb05ea4c",
+      "email": "demo@gmail.com",
+      "password": "12345678"
+    }
+  ]
+}
