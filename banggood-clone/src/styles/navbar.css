@@ -127,11 +127,13 @@
 }
 .nav-cart{
         height:56px;
-        width:70px;
+        width:60px;
         display: flex;
         flex-direction: row;
         overflow: auto;
         margin-left: 50px;
+        z-index: 2;
+        
 }
 .nav-cart>div{
         height:20px;
@@ -145,6 +147,7 @@
         display: flex;
         cursor: pointer;
         overflow: auto;
+        z-index:3;
 }
 .nav-cart>div>p{
         font-family:OpenSans,Arial;
@@ -230,4 +233,26 @@
         cursor: pointer;
         color: #ff6e26;
         background-color: rgb(236, 236, 236);
+}
+.carticon-navbar:hover{
+        color:#ff6e26;
+        cursor: pointer;
+}
+.carticon-navbar{
+        color: white;
+}
+.nav-catagories-menu{
+        background-color: white;
+        margin-left: 293px;
+        margin-top: -465px;
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        padding-left:20px;
+        font-family: OpenSans,Arial;
+        font-size: 13px;
+        visibility:visible;
+}
+.nav-catagories-menu>div{
+        padding-right: 50px;
 }
