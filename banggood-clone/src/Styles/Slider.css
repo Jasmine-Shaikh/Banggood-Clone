@@ -1,0 +1,266 @@
+.containerSlide {
+    height: 500px;
+}
+
+.sliderContainer{
+    position: relative;
+        margin-left: 270px;
+        padding-top: 16px;
+        width: 616px;
+        height: 290px;
+        text-align: center;
+        overflow: hidden;
+}
+.mainMtBot{
+    width: 616px;
+    height: 154px;
+    margin: 16px 0 0 270px;
+    display: flex;
+    gap: 11px;
+    
+}
+.proBotList{
+    width: 100%;
+    background: url(../Images/top_ranking_bg.png) no-repeat;
+    background-size: 100% 100%;
+
+}
+.proBotList1{
+    width: 100%;
+    background: url(../Images/fast_or_clear_bg.png) no-repeat;
+        background-size: 100% 100%;
+}
+
+.mainMtBot>div{
+    position: relative;
+        width: 302px;
+        height: 154px;
+        /* margin-right: 12px; */
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 12px 16px 9px;
+}
+
+.mainMtBot .title{
+    box-sizing: border-box;
+        display: flex;
+        height: 22px;
+        line-height: 22px;
+        align-items: center;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 8px;
+}
+.mainMtBot .title span{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.mainMtBot .title{
+    background: none;
+}
+.proList1{
+    display: flex;
+    justify-content: space-between;
+    background: none;
+}
+.proBotList .proList1 .proImg{
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+ .proList1 .proImg img{
+    width: 82px;
+    height: 82px;
+    border-radius: 4px;
+}
+ .proList1 span{
+    text-align: center;
+    background: none;
+}
+ .proList1 p{
+    background: none;
+}
+.priceNotranslate{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 4px;
+    height: 17px;
+}
+
+.conatinerLeft {
+    position: absolute;
+    right: 0;
+    margin-right: 32px;
+    width: 328px;
+    height: 460px;
+    top: 16px;
+}
+
+.mtLogin {
+    background: url(../Images/download.png) no-repeat;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 197px;
+    padding: 24px 16px 16px;
+    background-size: 100% 100%;
+    margin-bottom: 16px;
+}
+
+.leftAvatar {
+
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+}
+
+.userInfoWrap {
+    background: none;
+    display: flex;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    height: 19px;
+    line-height: 19px;
+
+    width: 100%;
+}
+
+.btn {
+    margin-top: 16px;
+    display: flex;
+    width: 88px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    height: 32px;
+    line-height: 32px;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 20px 20px 20px 20px;
+    opacity: 1;
+    font-size: 12px;
+    font-weight: 700;
+    color: #333;
+    margin-right: 8px;
+}
+
+.btnOrange {
+    color: #fff;
+    background: #ff6e26;
+    padding: 0px 16px;
+    margin-right: 4px;
+    border-radius: 20px;
+}
+
+.btnWhite {
+    color: #333;
+    padding: 0px 16px;
+    border-radius: 20px;
+    border: 1px solid #ebedf0;
+    background: #fff;
+}
+
+.titleB {
+    background: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    height: 19px;
+    color: #333;
+    padding: -0px;
+}
+
+.policy {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background: none;
+}
+
+.policy span {
+    background: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+}
+
+.mtDown {
+    background-color: #fff;
+    height: 233px;
+    padding: 2px 16px 16px;
+    border-radius: 4px;
+}
+
+.allowanceWrap {
+        padding: 12px 57px 12px 14px;
+    background: url("https://css.banggood.in/web/src/img/indexnewest/new/newuser_allowance_bg.png?v=8f50820") no-repeat;
+}
+
+.allowanceWrap .info {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.allowanceWrap .info span {
+    height: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.allowanceWrap .info .price {
+    font-weight: 400;
+    height: 18px;
+    line-height: 18px;
+    font-size: 13px;
+}
+.allowanceWrap .info .light {
+    font-weight: 400;
+    height: 18px;
+    line-height: 18px;
+    font-size: 13px;
+}
+
+.freeProlist{
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.freeProlist .img{
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    height: 90px;
+    position: relative;
+}
+
+.freeProlist .img span img{
+        width: 90px;
+        height: 90px;
+}
+.freeProlist .img .price{
+    position: absolute;
+        display: inline-block;
+        padding: 0 4px;
+        height: 18px;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+            line-height: 18px;
+            box-sizing: border-box;
+            background: #ff4733;
+            border-radius: 2px;
+            opacity: 1;
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+}
