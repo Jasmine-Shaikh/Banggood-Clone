@@ -1,17 +1,19 @@
 import React from "react";
-import "../styles/navbar.css";
+import "../Styles/navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { FaShoppingCart } from "react-icons/fa";
 import { IN } from "country-flag-icons/react/3x2";
+import {BrowserRouter} from "react-router-dom";
+import{NavLink}from "react-router-dom";
 
-export default function Navbar() {
+const Navbar= () => {
   return (
     <>
       <div className="header-wrapper">
         <div className="header-div1">
-          <img src={require("../images/logoimage.png")} />
+        <NavLink to="/"><img className="navimage-logo" src={require("../Images/logoimage.png")} /></NavLink>
           <div>
             <form className="nav-searchform">
               <input
@@ -60,14 +62,14 @@ export default function Navbar() {
         <div className="nav-div2">
           <div className="nav-div2-1"></div>
           <div className="nav-div2-2">
-            <a>FLASH DEALS</a>
-            <a>CLEARANCE SALE</a>
-            <a>TOP SELLERS</a>
-            <a>LIVE</a>
+          <NavLink to="/hot-deals"  className='menulinks'>FLASH DEALS</NavLink>
+          <NavLink to="/flash-deals"  className='menulinks'>CLEARANCE SALE</NavLink>
+          <NavLink to="/hot-deals"  className='menulinks'>TOP SELLERS</NavLink>
+          <NavLink to="/product"  className='menulinks'>LIVE</NavLink>
           </div>
         </div>
       </div>
-      <div className="nav-drop-dic-cat">
+      {/* <div className="nav-drop-dic-cat"> */}
         <div className="navbar-dropdown">
           <div className="navbar-dropdown1">
             <FontAwesomeIcon icon={faBars} color="#ff6e26" />{" "}
@@ -182,7 +184,8 @@ export default function Navbar() {
             <p>Small Beanie</p>
           </div>
         </div>
-      </div>
     </>
   );
-}
+};
+Navbar.protoTypes={};
+export default Navbar;

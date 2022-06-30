@@ -4,7 +4,7 @@
 
 .sliderContainer{
     position: relative;
-        margin-left: 270px;
+        margin-left: 310px;
         padding-top: 16px;
         width: 616px;
         height: 290px;
@@ -14,7 +14,7 @@
 .mainMtBot{
     width: 616px;
     height: 154px;
-    margin: 16px 0 0 270px;
+    margin: 16px 0 0 310px;
     display: flex;
     gap: 11px;
     
@@ -95,7 +95,7 @@
     margin-right: 32px;
     width: 328px;
     height: 460px;
-    top: 16px;
+    top: 120px;
 }
 
 .mtLogin {

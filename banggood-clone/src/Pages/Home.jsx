@@ -3,7 +3,7 @@ import AllProduct from '../Components/AllProduct'
 import FlashDeals from '../Components/FlashDeals'
 import HotDeals from '../Components/HotDeals'
 import Slider from '../Components/Slider'
-
+import '../Styles/home.css'
 // import { useDispatch,useSelector } from 'react-redux/es/exports'
 // import { getProducts } from '../Redux/Action'
 
@@ -16,7 +16,7 @@ const Home = () => {
   //     dispatch(getProducts())
   // },[])
   return (
-    <div>
+    <div className='home-main-div'>
         <Slider/>
         <FlashDeals/>
         <HotDeals/>
