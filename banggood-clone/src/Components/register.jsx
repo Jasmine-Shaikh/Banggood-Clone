@@ -228,7 +228,7 @@ export default function RegistrationPage(){
 
     const addUserToDb=async(payload)=>{
         try {
-            await fetch(`http://localhost:8080/registeredUsers`,{
+            await fetch(`https://fake-server-app-by-atul.herokuapp.com/registeredUsers`,{
               method: "POST",
               headers: {
                 "Content-Type": "application/json"

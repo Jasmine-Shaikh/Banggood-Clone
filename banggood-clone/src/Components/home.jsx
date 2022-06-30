@@ -23,6 +23,10 @@ export default function Home() {
             {
                 !logStatus ? (<Link to="/register">Create an account</Link>) : (<button onClick={handleLogout}>Logout</button>)
               }
+
+              <br/>
+
+              <Link to="/payment">Payment</Link>
         
         </div>
     )

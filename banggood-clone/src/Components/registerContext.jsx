@@ -10,7 +10,7 @@ export function ContextProvider ({ children }) {
         setLogStatus(false);
         setUser(null);
         try {
-            let response = await fetch(`http://localhost:8080/registeredUsers`);
+            let response = await fetch(`https://fake-server-app-by-atul.herokuapp.com/registeredUsers`);
             let res = await response.json();
             
             let currentUser = res.find(e => ((e.email === payload.email) && (e.password === e.password)));
@@ -29,7 +29,7 @@ export function ContextProvider ({ children }) {
     const manageData = async(id) => {
         try {
 
-            let response = await fetch(`http://localhost:8080/registeredUsers${id}`);
+            let response = await fetch(`https://fake-server-app-by-atul.herokuapp.com/registeredUsers${id}`);
             let res = await response.json();
 
             setUser(res);
