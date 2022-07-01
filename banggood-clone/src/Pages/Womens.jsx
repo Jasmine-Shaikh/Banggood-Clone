@@ -120,19 +120,31 @@ export default function Womens() {
       .then((res) => res.json())
       .then(() => {
         alert(name + " Added To Cart");
-        fetch("https://fake-server-app-by-atul.herokuapp.com/cart")
-        .then(res => res.json())
-        .then(data => {
-          setCart(data);
-          isLoad(false)
-        })
-        .catch((error) => console.log(error))
+        fetchData();
       })
       .catch((err) => {
         alert(" ⚠️ Already Present in cart");
         isLoad(false);
       });
   };
+
+
+  const fetchData = () => {
+    isLoad(true)
+    fetch("https://fake-server-app-by-atul.herokuapp.com/cart")
+        .then(res => res.json())
+        .then(data => {
+          setCart(data);
+          isLoad(false)
+        })
+        .catch((error) => console.log(error))
+  }
+
+  React.useEffect(() => {
+    fetchData()
+
+  }, [])
+
   const [load, isLoad] = useState(false);
   const [open, isOpen] = useState(false);
   const [open1, isOpen1] = useState(false);

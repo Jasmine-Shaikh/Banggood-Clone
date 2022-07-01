@@ -8,6 +8,24 @@ import { IN } from "country-flag-icons/react/3x2";
 import{NavLink}from "react-router-dom";
 
 const Navbar= () => {
+  const fetchData = () => {
+    isLoad(true)
+    fetch("https://fake-server-app-by-atul.herokuapp.com/cart")
+        .then(res => res.json())
+        .then(data => {
+          setCart(data);
+          isLoad(false)
+        })
+        .catch((error) => console.log(error))
+  }
+
+  React.useEffect(() => {
+    fetchData()
+
+  }, [])
+
+  const [load,isLoad] = React.useState(false);
+  const [cart,setCart] = React.useState([]);
   return (
     <>
       <div className="header-wrapper">
@@ -56,7 +74,7 @@ const Navbar= () => {
                 <FaShoppingCart className="carticon-navbar" size="30" />
               </NavLink>
             <div>
-              <p>0</p>
+              <p>{cart.length}</p>
             </div>
           </div>
         </div>

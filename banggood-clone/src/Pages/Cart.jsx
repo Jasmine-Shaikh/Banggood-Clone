@@ -96,7 +96,7 @@ const Cart = () => {
             <div className='list-top'>
               <h2>Shopping Cart ({cart.length})</h2>
               <div>
-                <span>Select all</span>
+                <span></span>
               </div>
             </div>
             <div className='listBlock'>
