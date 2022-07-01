@@ -322,7 +322,7 @@ export default function PaymentPage() {
                     <DivFlex>
                       <ImageLabel>Total:</ImageLabel><ImageLabel> ₹ {localStorage.getItem("totalCartAmount")}</ImageLabel></DivFlex>
                     <Divider />
-                    <Link to="/"><PayNowButton>PAY NOW</PayNowButton></Link>
+                    <Link to="/Success"><PayNowButton>PAY NOW</PayNowButton></Link>
 
                   </CardContent>
                 </React.Fragment></Card>

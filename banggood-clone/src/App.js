@@ -11,7 +11,8 @@ import Product from './Components/Product';
 import Cart from "./Pages/Cart.jsx";
 import  PaymentPage from "./Pages/payment.jsx";
 import RegistrationPage from "./Pages/register.jsx";
-import SignUpPage from  './Pages/signup.jsx'
+import SignUpPage from  './Pages/signup.jsx';
+import ThanksPage from "./Pages/Thanks.jsx"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/Payment" element={<PaymentPage />}></Route>
         <Route extract path="/Login" element= {<RegistrationPage/>}></Route>
         <Route extract path="/Signup" element= {<SignUpPage/>}></Route>
+        <Route extract path="/Success" element= {<ThanksPage/>}></Route>
       </Routes>
   );
 }
