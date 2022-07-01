@@ -8,7 +8,8 @@ import HotDeals from './Components/HotDeals';
 import Mens from './Pages/Mens'
 import Womens from './Pages/Womens';
 import Product from './Components/Product';
-import Cart from "./Pages/Cart.jsx"
+import Cart from "./Pages/Cart.jsx";
+import  PaymentPage from "./Pages/payment.jsx"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/Mens" element={<Mens />}></Route>
         <Route exact path="/Womens" element={<Womens />}></Route>
         <Route exact path="/Cart" element={<Cart />}></Route>
+        <Route exact path="/Payment" element={<PaymentPage />}></Route>
       </Routes>
   );
 }

@@ -316,6 +316,8 @@
     text-align: center;
     color: #fff;
     transition: background-color .3s;
+    padding-right: 90px;
+    padding-left: 90px;
 }
 
 .method {

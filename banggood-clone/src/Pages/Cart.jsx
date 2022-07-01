@@ -242,7 +242,7 @@ const Cart = () => {
               </div>
               <div className='paymentbutton'>
                 <button onClick={() => handlepayment(totalCart)} className='paypalCheckout' >Paypal</button>
-                <button onClick={() => handlepayment(totalCart)} className='withoutPaypal'>Proceed to Checkout</button>
+                <NavLink to="/Payment"><button onClick={() => handlepayment(totalCart)} className='withoutPaypal'>Proceed to Checkout</button></NavLink>
               </div>
             </div>
             <div className='method'>
