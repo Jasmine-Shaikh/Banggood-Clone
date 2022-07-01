@@ -7,7 +7,7 @@ import "../Styles/navbar.css"
 import { useState } from "react";
 import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
-import{NavLink}from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
@@ -119,8 +119,14 @@ export default function Mens() {
     })
       .then((res) => res.json())
       .then(() => {
-        isLoad(false);
         alert(name + " Added To Cart");
+        fetch("https://fake-server-app-by-atul.herokuapp.com/cart")
+        .then(res => res.json())
+        .then(data => {
+          setCart(data);
+          isLoad(false)
+        })
+        .catch((error) => console.log(error))
       })
       .catch((err) => {
         alert(" ⚠️ Already Present in cart");
@@ -134,6 +140,7 @@ export default function Mens() {
   const [open3, isOpen3] = useState(false);
   const [open4, isOpen4] = useState(false);
   const [open5, isOpen5] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const handleDrop = (value) => {
     if (value === 0) {
@@ -151,64 +158,68 @@ export default function Mens() {
     }
   };
   return (
-    
+
     <>
-      <Box sx={{ width: "100%" ,position: "fixed"}}>
-        {load === true ? <LinearProgress sx={{backgroundColor: "#ff6e26", "& .MuiLinearProgress-bar": {
-      backgroundColor: `#fae0a7`
-    }}} /> : ""}
+      <Box sx={{ width: "100%", position: "fixed" }}>
+        {load === true ? <LinearProgress sx={{
+          backgroundColor: "#ff6e26", "& .MuiLinearProgress-bar": {
+            backgroundColor: `#fae0a7`
+          }
+        }} /> : ""}
       </Box>
       <div>
-      <div className="header-wrapper">
-        <div className="header-div1">
-        <NavLink to="/"><img className="navimage-logo" src={require("../Images/20220610044604_981.gif.webp")} /></NavLink>
-          <div>
-            <form className="nav-searchform">
-              <input
-                type="text"
-                placeholder="Search.."
-                name="search"
-                className="nav-searchform-inp"
-                id="1231"
-              />
-              <button type="submit" className="nav-searchform-btn">
-                <FontAwesomeIcon icon={faSearch} color="white" />
-              </button>
-            </form>
-          </div>
-          <div>
-            <div className="nav-shipping">Ship to</div>
-            <div className="nav-flagdiv">
-              <IN title="India" className="nav-flag" />
-              <div> / English (India) /USD</div>
+        <div className="header-wrapper">
+          <div className="header-div1">
+            <NavLink to="/"><img className="navimage-logo" src={require("../Images/20220610044604_981.gif.webp")} /></NavLink>
+            <div>
+              <form className="nav-searchform">
+                <input
+                  type="text"
+                  placeholder="Search.."
+                  name="search"
+                  className="nav-searchform-inp"
+                  id="1231"
+                />
+                <button type="submit" className="nav-searchform-btn">
+                  <FontAwesomeIcon icon={faSearch} color="white" />
+                </button>
+              </form>
+            </div>
+            <div>
+              <div className="nav-shipping">Ship to</div>
+              <div className="nav-flagdiv">
+                <IN title="India" className="nav-flag" />
+                <div> / English (India) /USD</div>
+              </div>
+            </div>
+            <div className="navbar-userdiv">
+              <FontAwesomeIcon icon={faUser} className="navbar-user" />
+              <div>
+                <div className="nav-shipping2">Hello</div>
+                <div className="nav-signin">Sign in</div>
+              </div>
+            </div>
+            <div className="nav-cart">
+              <NavLink to="/Cart">
+                <FaShoppingCart className="carticon-navbar" size="30" />
+              </NavLink>
+              <div>
+                <p>{cart.length}</p>
+              </div>
             </div>
           </div>
-          <div className="navbar-userdiv">
-            <FontAwesomeIcon icon={faUser} className="navbar-user" />
-            <div>
-              <div className="nav-shipping2">Hello</div>
-              <div className="nav-signin">Sign in</div>
-            </div>
-          </div>
-          <div className="nav-cart">
-            <FaShoppingCart className="carticon-navbar" size="30" />
-            <div>
-              <p>0</p>
+          <div className="nav-div2">
+            <div className="nav-div2-1"></div>
+            <div className="nav-div2-2">
+              <NavLink to="/hot-deals" className='menulinks'>FLASH DEALS</NavLink>
+              <NavLink to="/flash-deals" className='menulinks'>CLEARANCE SALE</NavLink>
+              <NavLink to="/hot-deals" className='menulinks'>TOP SELLERS</NavLink>
+              <NavLink to="/product" className='menulinks'>LIVE</NavLink>
             </div>
           </div>
         </div>
-        <div className="nav-div2">
-          <div className="nav-div2-1"></div>
-          <div className="nav-div2-2">
-          <NavLink to="/hot-deals"  className='menulinks'>FLASH DEALS</NavLink>
-          <NavLink to="/flash-deals"  className='menulinks'>CLEARANCE SALE</NavLink>
-          <NavLink to="/hot-deals"  className='menulinks'>TOP SELLERS</NavLink>
-          <NavLink to="/product"  className='menulinks'>LIVE</NavLink>
-          </div>
-        </div>
-      </div>
-      {/* <div className="nav-drop-dic-cat"> */}
-    
+        {/* <div className="nav-drop-dic-cat"> */}
+
       </div>
       <div style={{ width: "70%", display: "flex", gap: "10px" }}>
         <Heading>Men's Clothing</Heading>

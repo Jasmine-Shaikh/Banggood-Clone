@@ -52,7 +52,9 @@ const Navbar= () => {
             </div>
           </div>
           <div className="nav-cart">
-            <FaShoppingCart className="carticon-navbar" size="30" />
+             <NavLink to="/Cart">
+                <FaShoppingCart className="carticon-navbar" size="30" />
+              </NavLink>
             <div>
               <p>0</p>
             </div>
