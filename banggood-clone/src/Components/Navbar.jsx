@@ -5,7 +5,6 @@ import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { FaShoppingCart } from "react-icons/fa";
 import { IN } from "country-flag-icons/react/3x2";
-import {BrowserRouter} from "react-router-dom";
 import{NavLink}from "react-router-dom";
 
 const Navbar= () => {
@@ -75,8 +74,8 @@ const Navbar= () => {
             <FontAwesomeIcon icon={faBars} color="#ff6e26" />{" "}
             <p>CATAGORIES &#62;</p>
           </div>
-          <div className="navbar-dropdown2">Women's Clothing </div>
-          <div className="navbar-dropdown2">Men's Clothing</div>
+          <div className="navbar-dropdown2"> <NavLink to="/Womens">Women's Clothing</NavLink> </div>
+          <div className="navbar-dropdown2"> <NavLink to="/Mens">Men's Clothing</NavLink></div>
           <div className="navbar-dropdown2">Phones & Accessories</div>
           <div className="navbar-dropdown2">Electronics</div>
           <div className="navbar-dropdown2">Tools, Industrial & Scientific</div>

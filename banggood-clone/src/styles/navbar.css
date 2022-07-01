@@ -2,8 +2,9 @@
         background-color:#2d2d38;
         padding-left: 7.5vw;
         padding-right: 5vw;
-        /* padding-bottom:5px; */
+        padding-bottom:15px;
         height:110px;
+        padding-top: 15px;
 }
 .header-div1{
         max-height: 56px;
