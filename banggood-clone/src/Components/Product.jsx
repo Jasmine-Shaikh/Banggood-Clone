@@ -44,7 +44,7 @@ height: 54px;
     margin-bottom: 20px;
     
 `
-const PriceWrap=styled.p`
+const PriceWrap = styled.p`
 background-color: #fff;
 line-height: 10px;
     height: 18px;
@@ -55,15 +55,15 @@ line-height: 10px;
 
 const Product = () => {
   const [productData, setProductData] = React.useState([]);
-  const [page,setPage] = useState(1)
-  const [limit,setLimit] = useState(24)
-  const handlePage=()=>{
-      setPage(page+1)
-      setLimit(limit+24)
+  const [page, setPage] = useState(1)
+  const [limit, setLimit] = useState(24)
+  const handlePage = () => {
+    setPage(page + 1)
+    setLimit(limit + 24)
   }
 
-  const handleClick=(id)=>{
-      console.log(id)
+  const handleClick = (id) => {
+    console.log(id)
   }
 
   React.useEffect(() => {
@@ -81,22 +81,22 @@ const Product = () => {
         {
           productData.map((data, idx) => {
             return (
-              <div onClick={()=>handleClick(data.id)} className='innerDiv' key={idx}>
-                <Img src={data.image} />
-                <div style={{padding:"0 3px"}}>
+              <div onClick={() => handleClick(data.id)} className='innerDiv' key={idx}>
+                <Img style={{ background: "#fff" }} src={data.image} />
+                <div style={{ padding: "0 3px", background: "#fff" }}>
                   <Title>{data.name}</Title>
                   <span className='newPrice'> &#8377;{data.price}</span>
                   <PriceWrap>
-                    <span className='oldprice'>{Math.floor(10000*Math.random(6))}</span>
+                    <span className='oldprice'>{Math.floor(10000 * Math.random(6))}</span>
                     <span>{data.off}</span>
                   </PriceWrap>
                   <div className='ratingDiv'>
                     <span className='sold'>{Math.floor(1000 * Math.random())}{" sold"}</span>
-                    <span className='rating'><AiFillStar style={{color: "rgb(255, 110, 38)"} }  ></AiFillStar>{data.ratings}</span>
+                    <span className='rating'><AiFillStar style={{ color: "rgb(255, 110, 38)" }}  ></AiFillStar>{data.ratings}</span>
                   </div>
-                 
+
                 </div>
-                
+
               </div>
             )
           })

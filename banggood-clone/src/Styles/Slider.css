@@ -2,91 +2,107 @@
     height: 500px;
 }
 
-.sliderContainer{
+.sliderContainer {
     position: relative;
-        margin-left: 270px;
-        padding-top: 16px;
-        width: 616px;
-        height: 290px;
-        text-align: center;
-        overflow: hidden;
+    margin-left: 270px;
+    padding-top: 16px;
+    width: 616px;
+    height: 290px;
+    text-align: center;
+    overflow: hidden;
 }
-.mainMtBot{
+
+.mainMtBot {
     width: 616px;
     height: 154px;
     margin: 16px 0 0 270px;
     display: flex;
     gap: 11px;
-    
+
 }
-.proBotList{
+
+.proBotList {
     width: 100%;
     background: url(../Images/top_ranking_bg.png) no-repeat;
     background-size: 100% 100%;
 
 }
-.proBotList1{
+
+.proBotList1 {
     width: 100%;
     background: url(../Images/fast_or_clear_bg.png) no-repeat;
-        background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 
-.mainMtBot>div{
+.mainMtBot>div {
     position: relative;
-        width: 302px;
-        height: 154px;
-        /* margin-right: 12px; */
-        box-sizing: border-box;
-        border-radius: 4px;
-        padding: 12px 16px 9px;
+    width: 302px;
+    height: 154px;
+    /* margin-right: 12px; */
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 16px 9px;
 }
 
-.mainMtBot .title{
+.mainMtBot .title {
     box-sizing: border-box;
-        display: flex;
-        height: 22px;
-        line-height: 22px;
-        align-items: center;
-        font-weight: 700;
-        color: #333;
-        margin-bottom: 8px;
+    display: flex;
+    height: 22px;
+    line-height: 22px;
+    align-items: center;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
 }
-.mainMtBot .title span{
+
+.mainMtBot .title span {
     box-sizing: border-box;
     font-size: 16px;
 }
-.mainMtBot .title{
+
+.mainMtBot .title {
     background: none;
 }
-.proList1{
+
+.proList1 {
     display: flex;
     justify-content: space-between;
     background: none;
 }
-.proBotList .proList1 .proImg{
+
+.proBotList .proList1 .proImg {
     display: flex;
     flex-direction: column;
     border-radius: 4px;
 }
- .proList1 .proImg img{
+
+.proList1 .proImg img {
     width: 82px;
     height: 82px;
     border-radius: 4px;
 }
- .proList1 span{
+
+.proList1 span {
     text-align: center;
     background: none;
 }
- .proList1 p{
+
+.proList1 p {
     background: none;
 }
-.priceNotranslate{
+
+.proImg {
+    background: none;
+}
+
+.priceNotranslate {
     display: inline-block;
     font-size: 12px;
     font-weight: 700;
     color: #333;
     margin-top: 4px;
     height: 17px;
+
 }
 
 .conatinerLeft {
@@ -109,7 +125,7 @@
 }
 
 .leftAvatar {
-
+    background: none;
     border-radius: 50%;
     width: 64px;
     height: 64px;
@@ -121,13 +137,17 @@
     display: flex;
 }
 
+.userInfoWrap div {
+    background: none;
+}
+
 .name {
     font-size: 14px;
     font-weight: 700;
     color: #333;
     height: 19px;
     line-height: 19px;
-
+    background: none;
     width: 100%;
 }
 
@@ -165,6 +185,10 @@
     background: #fff;
 }
 
+.benefits {
+    background: none;
+}
+
 .titleB {
     background: #fff;
     font-size: 14px;
@@ -196,13 +220,14 @@
 }
 
 .allowanceWrap {
-        padding: 12px 57px 12px 14px;
+    padding: 12px 57px 12px 14px;
     background: url("https://css.banggood.in/web/src/img/indexnewest/new/newuser_allowance_bg.png?v=8f50820") no-repeat;
 }
 
 .allowanceWrap .info {
     display: flex;
     flex-direction: column;
+    background: none;
 
 }
 
@@ -213,6 +238,7 @@
     font-weight: 700;
     color: #fff;
     white-space: nowrap;
+    background: none;
 }
 
 .allowanceWrap .info .price {
@@ -221,6 +247,7 @@
     line-height: 18px;
     font-size: 13px;
 }
+
 .allowanceWrap .info .light {
     font-weight: 400;
     height: 18px;
@@ -228,13 +255,15 @@
     font-size: 13px;
 }
 
-.freeProlist{
+.freeProlist {
     margin-top: 16px;
     width: 100%;
     display: flex;
     gap: 10px;
+    background: #fff;
 }
-.freeProlist .img{
+
+.freeProlist .img {
     display: flex;
     flex-direction: column;
     width: 90px;
@@ -242,25 +271,26 @@
     position: relative;
 }
 
-.freeProlist .img span img{
-        width: 90px;
-        height: 90px;
+.freeProlist .img span img {
+    width: 90px;
+    height: 90px;
 }
-.freeProlist .img .price{
+
+.freeProlist .img .price {
     position: absolute;
-        display: inline-block;
-        padding: 0 4px;
-        height: 18px;
-        bottom: 5px;
-        left: 50%;
-        transform: translateX(-50%);
-            line-height: 18px;
-            box-sizing: border-box;
-            background: #ff4733;
-            border-radius: 2px;
-            opacity: 1;
-            font-size: 12px;
-            font-weight: 600;
-            color: #fff;
-            text-align: center;
+    display: inline-block;
+    padding: 0 4px;
+    height: 18px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 18px;
+    box-sizing: border-box;
+    background: #ff4733;
+    border-radius: 2px;
+    opacity: 1;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
 }

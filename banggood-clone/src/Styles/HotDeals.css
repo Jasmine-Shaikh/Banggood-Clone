@@ -1,7 +1,7 @@
 .hotContainer {
     width: 95%;
     margin: auto;
-    background: rgba(0, 0, 0, 0.01);
+    /* background: rgba(0, 0, 0, 0.01); */
     margin-bottom: 20px;
 }
 
@@ -33,6 +33,7 @@
     font-weight: 700;
     color: #333;
     margin-bottom: 10px;
+    background: linear-gradient(137deg, #c9eaff, #d8fafe);
 
 }
 
@@ -56,6 +57,7 @@
     height: 170px;
     margin-top: 25px;
     padding: 0px;
+    background: linear-gradient(137deg, #c9eaff, #d8fafe);
 }
 
 .proList {
@@ -64,6 +66,7 @@
 
 .proList span {
     margin: 2px;
+    background: linear-gradient(137deg, #c9eaff, #d8fafe);
 }
 
 .proList .img img {
@@ -82,6 +85,7 @@
 }
 
 .right {
+    /* background-color: #fff; */
     border-radius: 8px;
     width: 80%;
     display: grid;
@@ -92,9 +96,11 @@
 .right>div {
     background-color: white;
 }
-.right>div>span{
+
+.right>div>span {
     padding-left: 10px;
     line-height: 2;
+    background-color: #fff;
 }
 
 .computer span img {
@@ -104,14 +110,18 @@
     height: 82px;
     cursor: pointer;
 }
-.computer span img:hover{
+
+.computer span img:hover {
     box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
 }
-.computer{
+
+.computer {
     justify-content: center;
     text-align: center;
-    
+    background: #fff;
 }
+
 .computer span {
     padding: 7px;
+    background: #fff;
 }

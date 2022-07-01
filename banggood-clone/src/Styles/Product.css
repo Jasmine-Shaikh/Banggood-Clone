@@ -1,69 +1,76 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.01)
 }
-.innerDiv{
+
+.innerDiv {
     margin-right: 12px;
-     margin-bottom: 16px;
+    margin-bottom: 16px;
     cursor: pointer;
-    line-height:0;
+    line-height: 0;
     background-color: #fff;
     border-radius: 4px;
 }
-.innerDiv:hover{
+
+.innerDiv:hover {
     box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
 }
-.newPrice{
+
+.newPrice {
     display: block;
-        font-size: 16px;
-        line-height: 22px;
-        font-weight: 700;
-        background-color: #fff;
-        color: rgb(51, 51, 51);
-    
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    background-color: #fff;
+    color: rgb(51, 51, 51);
+
 }
-.oldprice{
+
+.oldprice {
     text-decoration: line-through;
-        margin-right: 6px;
-        background-color: #fff;
+    margin-right: 6px;
+    background-color: #fff;
 }
-.ratingDiv{
+
+.ratingDiv {
     font-size: 13px;
-        overflow: hidden;
-        line-height: 18px;
+    overflow: hidden;
+    line-height: 18px;
     margin: 0%;
     background-color: #fff;
 }
-.sold{
+
+.sold {
     margin-right: 8px;
-        color: rgb(51, 51, 51);
-            font-size: 13px;
-            background-color: #fff;
-}
-.rating{
+    color: rgb(51, 51, 51);
     font-size: 13px;
-        overflow: hidden;
-        line-height: 18px;
+    background-color: #fff;
 }
 
-.moreItem{
+.rating {
+    font-size: 13px;
+    overflow: hidden;
+    line-height: 18px;
+}
+
+.moreItem {
     border: none;
     margin: auto;
     width: 150px;
     margin-top: 16px;
     display: inline-block;
-        height: 36px;
-        line-height: 36px;
-        padding: 0 20px;
-        border-radius: 24px;
-        background: #ff6e26;
-        font-size: 13px;
-        font-weight: 700;
-        color: #fff;
-        text-transform: uppercase;
-        cursor: pointer;
-        text-align: center;
-        justify-content: center;
-        
+    height: 36px;
+    line-height: 36px;
+    padding: 0 20px;
+    border-radius: 24px;
+    background: #ff6e26;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+
 }
