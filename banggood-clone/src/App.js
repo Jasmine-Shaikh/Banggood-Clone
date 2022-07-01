@@ -9,7 +9,9 @@ import Mens from './Pages/Mens'
 import Womens from './Pages/Womens';
 import Product from './Components/Product';
 import Cart from "./Pages/Cart.jsx";
-import  PaymentPage from "./Pages/payment.jsx"
+import  PaymentPage from "./Pages/payment.jsx";
+import RegistrationPage from "./Pages/register.jsx";
+import SignUpPage from  './Pages/signup.jsx'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route exact path="/Womens" element={<Womens />}></Route>
         <Route exact path="/Cart" element={<Cart />}></Route>
         <Route exact path="/Payment" element={<PaymentPage />}></Route>
+        <Route extract path="/Login" element= {<RegistrationPage/>}></Route>
+        <Route extract path="/Signup" element= {<SignUpPage/>}></Route>
       </Routes>
   );
 }

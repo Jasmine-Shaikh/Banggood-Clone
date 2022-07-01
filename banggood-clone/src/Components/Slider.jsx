@@ -92,10 +92,12 @@ const Slider = () => {
                         </div>
                         <div className='rightAvatar'>
                             <span className='name'>Welcome to Banggood</span>
-                            <div className='btn'>
-                                <a href='/' className='btnOrange'>Join Us</a>
-                                <a href='/' className='btnWhite'>Sign in</a>
+                            {localStorage.getItem("isLogin") === "true" ? " ": <div className='btn'>
+                                <a href='/Login' className='btnOrange'>Join Us</a>
+                                <a href='/Login' className='btnWhite'>Sign in</a>
                             </div>
+                        }
+                            
                         </div>
                     </div>
                     <div className='benefits'>

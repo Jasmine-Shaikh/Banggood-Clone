@@ -67,7 +67,7 @@ const Product = () => {
   }
 
   React.useEffect(() => {
-    fetch(`http://localhost:8080/allProducts?_page=${page}&_limit=${limit}`)
+    fetch(`https://fake-server-app-by-atul.herokuapp.com/products?_page=${page}&_limit=${limit}`)
       .then((res) => res.json())
       .then((data) => setProductData(data))
   }, [page])

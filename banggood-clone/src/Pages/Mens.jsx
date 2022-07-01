@@ -131,12 +131,12 @@ export default function Mens() {
   const fetchData = () => {
     isLoad(true)
     fetch("https://fake-server-app-by-atul.herokuapp.com/cart")
-        .then(res => res.json())
-        .then(data => {
-          setCart(data);
-          isLoad(false)
-        })
-        .catch((error) => console.log(error))
+      .then(res => res.json())
+      .then(data => {
+        setCart(data);
+        isLoad(false)
+      })
+      .catch((error) => console.log(error))
   }
 
   React.useEffect(() => {
@@ -206,7 +206,11 @@ export default function Mens() {
               <FontAwesomeIcon icon={faUser} className="navbar-user" />
               <div>
                 <div className="nav-shipping2">Hello</div>
-                <div className="nav-signin">Sign in</div>
+                <div className="nav-signin">
+                  <NavLink to="/Login">
+                    <div className="nav-signin">{localStorage.getItem("isLogin") === "true" ? <h4 style={{ marginTop: "2px" }}>User</h4> : <p style={{ marginTop: "2px" }}>Login</p>}</div>
+                  </NavLink>
+                </div>
               </div>
             </div>
             <div className="nav-cart">
