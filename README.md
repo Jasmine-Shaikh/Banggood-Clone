@@ -21,7 +21,7 @@ npm start
 1. [Jasmine Shaikh](https://github.com/Jasmine-Shaikh)
 2. [Pallav](https://github.com/Jasmine-Shaikh)
 3. [Atul Kumar](https://github.com/theatulanand)
-4. [Utsav Katiyar]()
+4. [Utsav Katiyar](https://github.com/utsavkatiyar34)
 
 ## Tech Stack
 1. React
