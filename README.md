@@ -17,6 +17,11 @@ cd banggood-clone
 npm start
 ```
 
+## Deployment Link
+```python
+   https://banggood-site-clone.netlify.app/
+```
+
 ## Contributors
 1. [Jasmine Shaikh](https://github.com/Jasmine-Shaikh)
 2. [Pallav](https://github.com/Jasmine-Shaikh)
@@ -30,3 +35,5 @@ npm start
 4. Heroku
 5. Styled Component
 6. CSS
+
+
