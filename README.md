@@ -18,7 +18,7 @@ npm start
 ```
 
 ## Deployment Link
-```
+```url
    https://banggood-site-clone.netlify.app/
 ```
 
