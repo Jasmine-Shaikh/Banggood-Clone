@@ -1,6 +1,8 @@
 # Banggood Clone
 
-Bangood is an E-commerce website.
+Clone of <a>https://www.banggood.com/nl/</a> which is an international online selling service from China.
+
+<img src=""/>
 
 ## Installation
 
@@ -23,17 +25,24 @@ npm start
 ```
 
 ## Contributors
-1. [Jasmine Shaikh](https://github.com/Jasmine-Shaikh)
-2. [Pallav](https://github.com/Jasmine-Shaikh)
-3. [Atul Kumar](https://github.com/theatulanand)
-4. [Utsav Katiyar](https://github.com/utsavkatiyar34)
+- [Jasmine Shaikh](https://github.com/Jasmine-Shaikh)
+- [Pallav](https://github.com/Jasmine-Shaikh)
+- [Atul Kumar](https://github.com/theatulanand)
+- [Utsav Katiyar](https://github.com/utsavkatiyar34)
 
 ## Tech Stack
-1. React
-2. JSON Server
-3. Material UI
-4. Heroku
-5. Styled Component
-6. CSS
+- React
+- JSON Server
+- Material UI
+- Heroku
+- Styled Component
+- CSS
+
+## Features
+- Sign Up and Login
+- Restaurant filter and sorting
+- Restaurant menu and description page
+- Add food to Cart
+- Shipping Details, Payment & checkout
 
 
