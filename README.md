@@ -2,7 +2,7 @@
 
 Clone of <a>https://www.banggood.com/nl/</a> which is an international online selling service from China.
 
-<img src="portfolio-1.PNG"/>
+[!Banggood_Image](https://github.com/Jasmine-Shaikh/Banggood-Clone/blob/main/banggood-clone/src/Images/portfolio-1.PNG)
 
 ## Installation
 
