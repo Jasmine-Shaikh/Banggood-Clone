@@ -1,29 +1,20 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { v4 as uuid } from "uuid";
+
 
 const Logo = styled.img`
 width: 172px;
 `
-
-
-
-
-
 const RegisterationHeader = styled.header`
  
    display:flex;
    align-items: left;
    padding: 20px; 
 `
-
-
 const RegisterationHeaderHeading = styled.div`
 padding: 0 16%;
 `
-
-
 const GreySmallFont = styled.p`
 margin: 0px;
 font-size: 14px;
@@ -38,9 +29,6 @@ color: #5a5a5a;
 text-align: center;
     
 `
-
-
-
 const SignUpAndLogin = styled.footer`
 
 display:flex;
@@ -48,13 +36,6 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 `
-
-
-
-
-
-
-
 
 
 const Button = styled.button`
