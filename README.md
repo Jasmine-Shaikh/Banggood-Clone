@@ -40,9 +40,8 @@ npm start
 
 ## Features
 - Sign Up and Login
-- Restaurant filter and sorting
-- Restaurant menu and description page
-- Add food to Cart
+- Products filter and sorting
+- Add products to Cart
 - Shipping Details, Payment & checkout
 
 
